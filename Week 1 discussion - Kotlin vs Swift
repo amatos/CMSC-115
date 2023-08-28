@@ -1,0 +1,22 @@
+Kotlin vs Swift
+
+Kotlin and Swift are popular modern languages created with the goal of simplifying development.  Both languages are designed to decrease the likelihood of writing memory-unsafe code, minimizing syntax errors, and to incorporate lessons learned from their predecessors, Java and Objective C respectively.
+
+Null Pointer errors
+Both Kotlin and Swift include language specifics designed to minimize null pointer exceptions.  Both languages require variables that _can_ be null to be explicitly marked as such.  The compiler will otherwise indicate an error if a variable could be set to null.
+
+Platforms
+Kotlin was targeted to run on the Java JVM, and can be deployed on any platform that has a pre-existing Java Virtual Machine.  Swift, in contrast, compiles to native code, and can only run on systems that can be targeted by the Swift compiler and its standard library.  This current includes:
+- Apple Platforms (macOS, iOS, watchOS, tvOS)
+- Linux on x86
+- Windows
+
+Popular targets
+Kotlin was originally created by JetBrains with the goals of a JVM based language that contained features that JetBrains did not see currently in the market, with a secondary goal of maintaining Java's quick compile time.  A terciary goal was to drive sales of JetBrain's flagship IDE, IntelliJ Idea.  Kotlin gained increased visibility and popularity once it was adopted by Google as Android's primary language.
+
+Swift was created by Apple with a goal of simplifying development compared to Objective C, ensuring memory-safe code, and to be a language usable all the way from kernel level systems development, to application development, and also for quick one-shot "script" like applications.  Swift has been Apple's primary language for writing applications for their platforms.
+
+Sources:
+"Kotlin docs", https://kotlinlang.org/docs/home.html
+"About Swift", https://www.swift.org/about/
+"Swift vs Kotlin", https://betterprogramming.pub/swift-vs-kotlin-the-similarities-and-differences-you-should-know-b2f1be201888

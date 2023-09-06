@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Chudnovsky {
+public class discussion_week_2 {
 
     public static void main( String[ ] args ) {
         Scanner input = new Scanner(System.in);
@@ -15,13 +15,13 @@ public class Chudnovsky {
         // This can be calculated two ways.  Either recursively or via a simple loop.
 
         // Using a loop
-        double result = new Chudnovsky( ).calculateLoop( k );
+        double result = new discussion_week_2( ).calculateLoop( k );
 
         // Format the output to the desired number of decimals
         System.out.println( "result = " + String.format( outputFormat, result ) );
 
         // Recursively
-        result = 1 / new Chudnovsky( ).calculateRecursive( k );;
+        result = 1 / new discussion_week_2( ).calculateRecursive( k );;
 
         System.out.println( "result = " + String.format( outputFormat, result ) );
     }

@@ -69,7 +69,7 @@ public class Exercise05_01 {
         // is the case, we print a message saying that only the terminator was entered, and we can't calculate
         // an average.  Otherwise, we print the average.
         if (Double.isNaN(average)) {
-            System.out.println("No numbers were provided except the terminator (0).  No average possible.");
+            System.out.println("No numbers are entered except 0");
         } else {
             System.out.println("The average is " + average);
         }

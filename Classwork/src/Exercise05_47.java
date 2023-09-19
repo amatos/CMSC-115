@@ -40,7 +40,6 @@ public class Exercise05_47 {
                 case 6:
                 case 8:
                 case 10:
-                case 12:
                     checksum += Character.getNumericValue(isbn[counter]);
                     break;
                 case 1:

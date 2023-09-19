@@ -13,7 +13,7 @@ public class Exercise05_01 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String providedValue;
-        int counter = 0;
+        int counter;
         int positive = 0;
         int negative = 0;
         int total = 0;
@@ -27,16 +27,18 @@ public class Exercise05_01 {
         // This is to prevent an infinite loop, and to prevent a crash if they enter too many numbers.
         // Counter is used track the number of inputs already entered.  We assume an initial value of the
         // length of (providedValue / 2) + 1, since we use spaces as delimiters.
-        counter = (int) (providedValue.length() / 2) + 1;
-        while (!providedValue.contains("0")) {
+        counter = (providedValue.length() / 2) + 1;
+        StringBuilder providedValueBuilder = new StringBuilder(providedValue);
+        while (!providedValueBuilder.toString().contains("0")) {
             System.out.print("No terminator (0) was provided.  Continue entering input: ");
-            providedValue += input.nextLine();
+            providedValueBuilder.append(input.nextLine());
             counter++;
             if (counter == Integer.MAX_VALUE) {
                 System.out.println("You have reached the maximum number of inputs.  Terminating input for you.");
-                providedValue += " 0";
+                providedValueBuilder.append(" 0");
             }
         }
+        providedValue = String.valueOf(providedValueBuilder);
 
         // Iterate through providedValue to split the string into numbers based on a separator of " ".
         // We first check if the value of s is a digit.  If not, we break out of the loop.  If 0 was

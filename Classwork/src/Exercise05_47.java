@@ -24,6 +24,7 @@ public class Exercise05_47 {
 
         if (providedValue.length() != 12) {
             System.out.println(providedValue + " is an invalid input");
+            System.exit(1);
         } else {
             isbn = providedValue.toCharArray();
         }

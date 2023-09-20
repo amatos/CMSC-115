@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CMSC 115.iml" filepath="$PROJECT_DIR$/CMSC 115.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CMSC 115.iml" filepath="$PROJECT_DIR$/.idea/CMSC 115.iml" />
     </modules>
   </component>
 </project>

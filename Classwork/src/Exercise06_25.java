@@ -20,6 +20,7 @@ Enter time in milliseconds: 555550000
 154:19:10
 Class Name: Exercise06_25
  */
+
 public class Exercise06_25 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

@@ -20,5 +20,32 @@
     Class Name: Exercise07_19
  */
 
+import java.util.Scanner;
+
 public class Exercise07_19 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter list: ");
+        int providedLength = input.nextInt();
+
+        int[] list = new int[providedLength];
+        for (int counter=0; counter < providedLength; counter++) {
+            list[counter] = input.nextInt();
+        }
+        if (isSorted(list)) {
+            System.out.println("The list is already sorted");
+        } else {
+            System.out.println("The list is not sorted");
+        }
+    }
+
+    public static boolean isSorted(int[] list) {
+        for (int counter=0; counter < list.length-1; counter++) {
+            if (list[counter] > list[counter+1]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

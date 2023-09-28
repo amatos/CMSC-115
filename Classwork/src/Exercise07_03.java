@@ -21,5 +21,30 @@
     Class Name: Exercise07_03
  */
 
+import java.util.Scanner;
+
 public class Exercise07_03 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the integers between 1 and 100: ");
+        String providedValue = input.nextLine();
+
+        int[] numberList;
+        numberList = new int[101];
+
+        for (String s : providedValue.split(" ")) {
+            numberList[Integer.parseInt(s)] += 1;
+        }
+
+        for (int counter = 1; counter <= 100; counter++) {
+            if (numberList[counter] > 0) {
+                String timeSingularOrPlural = " time";
+                if (numberList[counter] > 1) {
+                    timeSingularOrPlural = timeSingularOrPlural + 's';
+                }
+                System.out.println(counter + " occurs " + numberList[counter] + timeSingularOrPlural);
+            }
+        }
+    }
 }

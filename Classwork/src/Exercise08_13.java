@@ -22,5 +22,40 @@
     Class Name: Exercise08_13
 */
 
+import java.util.Scanner;
+
 public class Exercise08_13 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows and columns of the array: ");
+        int rows = input.nextInt();
+        int columns = input.nextInt();
+
+        System.out.println("Enter the array:");
+        double[][] array = new double[rows][columns];
+        for (int row=0; row < array.length; row++) {
+            for (int column=0; column < array[row].length; column++) {
+                array[row][column] = input.nextDouble();
+            }
+        }
+
+        int[] resultArray = locateLargest(array);
+        System.out.println("The location of the largest element is at (" + resultArray[0] + ", " + resultArray[1] + ")");
+    }
+
+    public static int[] locateLargest(double[][] a) {
+        int[] largest = new int[2];
+        double largestEntry = a[0][0];
+        for (int row=0; row < a.length; row++) {
+            for (int column=0; column < a[row].length; column++) {
+                if (a[row][column] > largestEntry) {
+                    largestEntry = a[row][column];
+                    largest[0] = row;
+                    largest[1] = column;
+                }
+            }
+        }
+        return largest;
+    }
 }

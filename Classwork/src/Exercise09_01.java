@@ -22,34 +22,12 @@ Class Name: Exercise09_01
 
 public class Exercise09_01 {
     public static void main(String[] args) {
-        rectangle rectangle1 = new rectangle(4, 40);
-        rectangle rectangle2 = new rectangle(3.5, 35.9);
+        Rectangle rectangle1 = new Rectangle(4, 40);
+        Rectangle rectangle2 = new Rectangle(3.5, 35.9);
 
-        System.out.println("The area of a rectangle with width " + rectangle1.width + " and height " + rectangle1.height + " is " + rectangle1.getArea());
+        System.out.println("The area of a rectangle with width " + rectangle1.getWidth() + " and height " + rectangle1.getHeight() + " is " + rectangle1.getArea());
         System.out.println("The perimeter of a rectangle is " + rectangle1.getPerimeter());
-        System.out.println("The area of a rectangle with width " + rectangle2.width + " and height " + rectangle2.height + " is " + rectangle2.getArea());
+        System.out.println("The area of a rectangle with width " + rectangle2.getWidth() + " and height " + rectangle2.getHeight() + " is " + rectangle2.getArea());
         System.out.println("The perimeter of a rectangle is " + rectangle2.getPerimeter());
-    }
-}
-
-class rectangle {
-    double width = 1;
-    double height = 1;
-
-    public rectangle() {
-
-    }
-
-    public rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    public double getArea() {
-        return (width * height);
-    }
-
-    public double getPerimeter() {
-        return (2 * (width + height));
     }
 }

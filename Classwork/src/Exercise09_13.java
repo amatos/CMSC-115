@@ -35,30 +35,8 @@ public class Exercise09_13 {
                 array[counter1][counter2] = input.nextDouble();
         }
 
-        Location location = Location.locateLargest(array);
-
-        System.out.println("The largest element is " + location.maxValue + ", located at (" + location.row + ", " + location.column + ")");
-    }
-}
-
-class Location {
-    public static int row;
-    public static int column;
-    public static double maxValue;
-
-    public static Location locateLargest(double[][] a) {
-        maxValue = a[0][0];
-        row = 0;
-        column = 0;
-        for (int counter1 = 0; counter1 < a.length; counter1++) {
-            for (int counter2 = 0; counter2 < a[counter1].length; counter2++) {
-                if (a[counter1][counter2] > maxValue) {
-                    maxValue = a[counter1][counter2];
-                    row = counter1;
-                    column = counter2;
-                }
-            }
-        }
-        return new Location();
+        Location.locateLargest(array);
+        System.out.println("The largest element is " + Location.getMaxValue() + ", located at (" + Location.getRow()
+                + ", " + Location.getColumn() + ")");
     }
 }
